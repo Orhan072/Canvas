@@ -1,0 +1,171 @@
+<html>
+<head>
+    <link rel="stylesheet" href="canvas.css">
+<style>
+#canvas{border:1px solid black; background-color: darkblue;}
+</style>
+
+</head>
+
+<!--Het script van de gebouwen,
+coördinaten:
+het eerste cijfer maakt het gebouw kleiner/groter via de bovenzijde
+het tweede cijfer bepaalt de hoogte van het gebouw
+het derde cijfer bepaalt de breedte van het gebouw
+het vierde cijfer maakt het gebouw kleiner/groter via de onderzijde -->
+<body>
+    <canvas id="canvas" width="800" height="600"></canvas>
+
+    <script>
+        var c = document.getElementById("canvas");
+
+        var gebouw1 = c.getContext("2d");
+        gebouw1.fillStyle = "black";
+        gebouw1.fillRect(30, 190, 115, 600,); //coordinaten werken als volgt: x, y, lengte, breedte
+
+
+        var gebouw2 = c.getContext("2d");
+        gebouw2.fillStyle = "black";
+        gebouw2.fillRect(650, 200, 115, 600,); //coordinaten werken als volgt: x, y, lengte, breedte
+
+
+        var gebouw3 = c.getContext("2d");
+        gebouw3.fillStyle = "black";
+        gebouw3.fillRect(500, 150, 115, 600,); //coordinaten werken als volgt: x, y, lengte, breedte
+
+        var gebouw4 = c.getContext("2d");
+        gebouw4.fillStyle = "black";
+        gebouw4.fillRect(350, 140, 115, 600,); //coordinaten werken als volgt: x, y, lengte, breedte
+
+        var gebouw5 = c.getContext("2d");
+        gebouw5.fillStyle = "black";
+        gebouw5.fillRect(200, 140, 115, 600,); //coordinaten werken als volgt: x, y, lengte, breedte
+        //ramen gebouw1 
+        var raam1 = c.getContext("2d");
+        raam1.fillStyle = "yellow";
+        raam1.fillRect(40, 200, 95, 50,);
+
+        var raam1 = c.getContext("2d");
+        raam1.fillStyle = "yellow";
+        raam1.fillRect(40, 300, 95, 50,);
+
+        var raam1 = c.getContext("2d");
+        raam1.fillStyle = "yellow";
+        raam1.fillRect(40, 400, 95, 50,);
+        //ramen gebouw2
+        var raam2 = c.getContext("2d");
+        raam2.fillStyle = "yellow";
+        raam2.fillRect(210, 160, 95, 50,);
+
+        var raam2 = c.getContext("2d");
+        raam2.fillStyle = "yellow";
+        raam2.fillRect(210, 250, 95, 50,);
+
+        var raam2 = c.getContext("2d");
+        raam2.fillStyle = "yellow";
+        raam2.fillRect(210, 330, 95, 50,);
+
+        var raam2 = c.getContext("2d");
+        raam2.fillStyle = "yellow";
+        raam2.fillRect(210, 410, 95, 50,);
+        //ramen gebouw3
+        var raam3 = c.getContext("2d");
+        raam3.fillStyle = "yellow";
+        raam3.fillRect(360, 160, 95, 50,);
+
+        var raam2 = c.getContext("2d");
+        raam2.fillStyle = "yellow";
+        raam2.fillRect(360, 250, 95, 50,);
+
+        var raam2 = c.getContext("2d");
+        raam2.fillStyle = "yellow";
+        raam2.fillRect(360, 330, 95, 50,);
+        //ingang gebouw3
+        var gebouw3 = c.getContext("2d");
+        gebouw3.fillStyle = "grey";
+        gebouw3.fillRect(500, 490, 60, 200,);
+
+        var raam2 = c.getContext("2d");
+        raam2.fillStyle = "yellow";
+        raam2.fillRect(360, 410, 95, 50,);
+        //ramen gebouw 4
+        var raam4 = c.getContext("2d");
+        raam4.fillStyle = "yellow";
+        raam4.fillRect(510, 170, 95, 50,);
+
+        var raam4 = c.getContext("2d");
+        raam4.fillStyle = "yellow";
+        raam4.fillRect(510, 250, 95, 50,);
+
+        var raam4 = c.getContext("2d");
+        raam4.fillStyle = "yellow";
+        raam4.fillRect(510, 330, 95, 50,);
+
+        var raam4 = c.getContext("2d");
+        raam4.fillStyle = "yellow";
+        raam4.fillRect(510, 410, 95, 50,);
+        //ramen gebouw5
+        var raam5 = c.getContext("2d");
+        raam5.fillStyle = "yellow";
+        raam5.fillRect(660, 215, 95, 50,);
+
+        var raam5 = c.getContext("2d");
+        raam5.fillStyle = "yellow";
+        raam5.fillRect(660, 295, 95, 50,);
+
+        var raam5 = c.getContext("2d");
+        raam5.fillStyle = "yellow";
+        raam5.fillRect(660, 375, 95, 50,);
+
+        var raam5 = c.getContext("2d");
+        raam5.fillStyle = "yellow";
+        raam55.fillRect(660, 455, 95, 50,);
+        
+    // de vrachtwagen
+        var vrachtwagen = c.getContext("2d");
+        vrachtwagen.fillStyle = "grey";
+        vrachtwagen.fillRect(10, 500, 300, 80,); 
+
+        var voorkant = c.getContext("2d");
+        voorkant.fillStyle = "darkgrey";
+        voorkant.fillRect(250, 500, 75, 80,); 
+
+// de vier wielen van de vrachtwagen
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(275, 600, 25, 40, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fillStyle = "red";
+        ctx.fill();
+       
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(200, 600, 25, 40, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fillStyle = "red";
+        ctx.fill();
+
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(100, 600, 25, 40, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fillStyle = "red";
+        ctx.fill();
+
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(30, 600, 25, 40, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fillStyle = "red";
+        ctx.fill();
+     
+        //code voor de planeet
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(60, 50, 90, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fillStyle = "white";
+        ctx.fill();
+    </script>
+</body>
+</html>
