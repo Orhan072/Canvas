@@ -1,9 +1,13 @@
 <html>
+
 <head>
     <link rel="stylesheet" href="canvas.css">
-<style>
-#canvas{border:1px solid black; background-color: darkblue;}
-</style>
+    <style>
+        #canvas {
+            border: 1px solid black;
+            background-color: darkblue;
+        }
+    </style>
 
 </head>
 
@@ -13,12 +17,13 @@ het eerste cijfer maakt het gebouw kleiner/groter via de bovenzijde
 het tweede cijfer bepaalt de hoogte van het gebouw
 het derde cijfer bepaalt de breedte van het gebouw
 het vierde cijfer maakt het gebouw kleiner/groter via de onderzijde -->
+
 <body>
     <canvas id="canvas" width="800" height="600"></canvas>
 
     <script>
         var c = document.getElementById("canvas");
-
+        //codes voor de gebouwen
         var gebouw1 = c.getContext("2d");
         gebouw1.fillStyle = "black";
         gebouw1.fillRect(30, 190, 115, 600,); //coordinaten werken als volgt: x, y, lengte, breedte
@@ -83,7 +88,7 @@ het vierde cijfer maakt het gebouw kleiner/groter via de onderzijde -->
         //ingang gebouw3
         var gebouw3 = c.getContext("2d");
         gebouw3.fillStyle = "grey";
-        gebouw3.fillRect(500, 490, 60, 200,);
+        gebouw3.fillRect(525, 490, 60, 200,);
 
         var raam2 = c.getContext("2d");
         raam2.fillStyle = "yellow";
@@ -104,61 +109,80 @@ het vierde cijfer maakt het gebouw kleiner/groter via de onderzijde -->
         var raam4 = c.getContext("2d");
         raam4.fillStyle = "yellow";
         raam4.fillRect(510, 410, 95, 50,);
+        //ingang gebouw4
+        var gebouw3 = c.getContext("2d");
+        gebouw3.fillStyle = "grey";
+        gebouw3.fillRect(375, 490, 60, 200,);
         //ramen gebouw5
         var raam5 = c.getContext("2d");
         raam5.fillStyle = "yellow";
-        raam5.fillRect(660, 215, 95, 50,);
+        raam5.fillRect(660, 210, 95, 50,);
 
         var raam5 = c.getContext("2d");
         raam5.fillStyle = "yellow";
-        raam5.fillRect(660, 295, 95, 50,);
+        raam5.fillRect(660, 280, 95, 50,);
 
         var raam5 = c.getContext("2d");
         raam5.fillStyle = "yellow";
-        raam5.fillRect(660, 375, 95, 50,);
+        raam5.fillRect(660, 360, 95, 50,);
 
         var raam5 = c.getContext("2d");
         raam5.fillStyle = "yellow";
-        raam55.fillRect(660, 455, 95, 50,);
-        
-    // de vrachtwagen
+        raam5.fillRect(660, 440, 95, 50,);
+        //ingang gebouw5
+        var gebouw3 = c.getContext("2d");
+        gebouw3.fillStyle = "grey";
+        gebouw3.fillRect(675, 500, 60, 200,);
+
+        // de vrachtwagen
         var vrachtwagen = c.getContext("2d");
-        vrachtwagen.fillStyle = "grey";
-        vrachtwagen.fillRect(10, 500, 300, 80,); 
+        vrachtwagen.fillStyle = "#eeff1b";
+        vrachtwagen.fillRect(10, 500, 300, 80,);
 
         var voorkant = c.getContext("2d");
-        voorkant.fillStyle = "darkgrey";
-        voorkant.fillRect(250, 500, 75, 80,); 
+        voorkant.fillStyle = "#282828";
+        voorkant.fillRect(250, 500, 75, 80,);
+        var ctx = canvas.getContext("2d");
+        //voorkant van de vrachtwagen
+        var voorkant = c.getContext("2d");
+        voorkant.fillStyle = "Gainsboro";
+        voorkant.fillRect(275, 500, 50, 40,);
+        var ctx = canvas.getContext("2d");
+        //tekst op vrachtwagen
+        ctx.font = "30px arial";
+        ctx.fillStyle = "white";
+        ctx.textAlign = "center";
+        ctx.fillText("JUMBO", 135, 550);
 
-// de vier wielen van de vrachtwagen
+        // de vier wielen van de vrachtwagen
         var ctx = c.getContext("2d");
         ctx.beginPath();
         ctx.arc(275, 600, 25, 40, 2 * Math.PI);
         ctx.stroke();
-        ctx.fillStyle = "red";
+        ctx.fillStyle = "#383838";
         ctx.fill();
-       
+
         var ctx = c.getContext("2d");
         ctx.beginPath();
         ctx.arc(200, 600, 25, 40, 2 * Math.PI);
         ctx.stroke();
-        ctx.fillStyle = "red";
+        ctx.fillStyle = "#383838";
         ctx.fill();
 
         var ctx = c.getContext("2d");
         ctx.beginPath();
         ctx.arc(100, 600, 25, 40, 2 * Math.PI);
         ctx.stroke();
-        ctx.fillStyle = "red";
+        ctx.fillStyle = "#383838";
         ctx.fill();
 
         var ctx = c.getContext("2d");
         ctx.beginPath();
         ctx.arc(30, 600, 25, 40, 2 * Math.PI);
         ctx.stroke();
-        ctx.fillStyle = "red";
+        ctx.fillStyle = "#383838";
         ctx.fill();
-     
+
         //code voor de planeet
         var ctx = c.getContext("2d");
         ctx.beginPath();
@@ -168,4 +192,5 @@ het vierde cijfer maakt het gebouw kleiner/groter via de onderzijde -->
         ctx.fill();
     </script>
 </body>
+
 </html>
